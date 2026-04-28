@@ -35,7 +35,7 @@ public class BBQSandwichItem extends FoodItem {
 		if (old == null || skewers.stack().isEmpty()) return old;
 		FoodProperties.Builder builder = new FoodProperties.Builder();
 		builder.nutrition(old.nutrition());
-		builder.saturationModifier(old.saturation());
+		builder.saturationModifier(old.saturation() / old.nutrition() / 2);
 		if (old.eatDurationTicks() < 20) builder.fast();
 		if (old.canAlwaysEat()) builder.alwaysEdible();
 		Set<Holder<MobEffect>> set = new HashSet<>();

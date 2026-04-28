@@ -43,7 +43,7 @@ public class BBQDItems {
 
 	public static final ItemEntry<BBQSandwichItem> BIBIMBAP = reg("bibimbap",
 			p -> new BBQSandwichItem(p.food(new FoodProperties.Builder().nutrition(16).saturationModifier(0.7f)
-					.effect(() -> new MobEffectInstance(ModEffects.COMFORT, 2400), 1)
+					.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 2400), 1)
 					.build()))).register();
 
 	private static final DCReg DC = DCReg.of(BarbequesDelight.REG);

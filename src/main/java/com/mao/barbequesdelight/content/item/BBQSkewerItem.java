@@ -40,7 +40,7 @@ public class BBQSkewerItem extends FoodItem {
 		if (seasoning == null) return ans;
 		FoodProperties.Builder builder = new FoodProperties.Builder()
 				.nutrition(ans.nutrition())
-				.saturationModifier(ans.saturation());
+				.saturationModifier(ans.saturation() / ans.nutrition() / 2);
 		for (var e : ans.effects()) {
 			seasoning.appendEffect(builder, e.effect(), e.probability());
 		}

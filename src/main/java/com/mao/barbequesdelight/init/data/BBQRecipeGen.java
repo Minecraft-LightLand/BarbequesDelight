@@ -39,15 +39,15 @@ public class BBQRecipeGen {
 		grillSkewer(pvd, BBQSkewers.MUSHROOM, 6);
 		grillSkewer(pvd, BBQSkewers.VEGETABLE, 4);
 
-		craftSkewer(pvd, BBQSkewers.COD, Ingredient.of(CommonTags.FOODS_RAW_COD), Ingredient.of(CommonTags.FOODS_TOMATO));
-		craftSkewer(pvd, BBQSkewers.SALMON, Ingredient.of(CommonTags.FOODS_RAW_SALMON), Ingredient.of(CommonTags.FOODS_TOMATO));
-		craftSkewer(pvd, BBQSkewers.CHICKEN, Ingredient.of(CommonTags.FOODS_RAW_CHICKEN), Ingredient.of(CommonTags.FOODS_ONION));
-		craftSkewer(pvd, BBQSkewers.RABBIT, Ingredient.of(Items.RABBIT), Ingredient.of(CommonTags.FOODS_CABBAGE));
-		craftSkewer(pvd, BBQSkewers.LAMB, Ingredient.of(CommonTags.FOODS_RAW_MUTTON));
-		craftSkewer(pvd, BBQSkewers.PORK_SAUSAGE, Ingredient.of(CommonTags.FOODS_RAW_PORK));
-		craftSkewer(pvd, BBQSkewers.POTATO, Ingredient.of(Items.POTATO), Ingredient.of(CommonTags.FOODS_RAW_BACON));
+		craftSkewer(pvd, BBQSkewers.COD, Ingredient.of(CommonTags.Items.FOODS_RAW_COD), Ingredient.of(CommonTags.Items.FOODS_TOMATO));
+		craftSkewer(pvd, BBQSkewers.SALMON, Ingredient.of(CommonTags.Items.FOODS_RAW_SALMON), Ingredient.of(CommonTags.Items.FOODS_TOMATO));
+		craftSkewer(pvd, BBQSkewers.CHICKEN, Ingredient.of(CommonTags.Items.FOODS_RAW_CHICKEN), Ingredient.of(CommonTags.Items.FOODS_ONION));
+		craftSkewer(pvd, BBQSkewers.RABBIT, Ingredient.of(Items.RABBIT), Ingredient.of(CommonTags.Items.FOODS_CABBAGE));
+		craftSkewer(pvd, BBQSkewers.LAMB, Ingredient.of(CommonTags.Items.FOODS_RAW_MUTTON));
+		craftSkewer(pvd, BBQSkewers.PORK_SAUSAGE, Ingredient.of(CommonTags.Items.FOODS_RAW_PORK));
+		craftSkewer(pvd, BBQSkewers.POTATO, Ingredient.of(Items.POTATO), Ingredient.of(CommonTags.Items.FOODS_RAW_BACON));
 		craftSkewer(pvd, BBQSkewers.MUSHROOM, Ingredient.of(Items.BROWN_MUSHROOM));
-		craftSkewer(pvd, BBQSkewers.BEEF, Ingredient.of(CommonTags.FOODS_RAW_BEEF), Ingredient.of(CommonTags.FOODS_CABBAGE));
+		craftSkewer(pvd, BBQSkewers.BEEF, Ingredient.of(CommonTags.Items.FOODS_RAW_BEEF), Ingredient.of(CommonTags.Items.FOODS_CABBAGE));
 		craftSkewer(pvd, BBQSkewers.VEGETABLE, Ingredient.of(Tags.Items.FOODS_VEGETABLE), Ingredient.of(Tags.Items.FOODS_FRUIT));
 
 		unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, BBQDBlocks.GRILL.get())::unlockedBy, Items.IRON_INGOT)
@@ -58,7 +58,7 @@ public class BBQRecipeGen {
 
 		unlock(pvd, new CombineItemRecipeBuilder(BBQDItems.BIBIMBAP.get(), 1)::unlockedBy, ModItems.COOKED_RICE.get())
 				.requires(ModItems.COOKED_RICE.get())
-				.requires(CommonTags.FOODS_ONION)
+				.requires(CommonTags.Items.FOODS_ONION)
 				.requires(Tags.Items.CROPS_CARROT)
 				.requires(BBQTagGen.GRILLED_SKEWERS)
 				.requires(BBQTagGen.GRILLED_SKEWERS)
@@ -67,11 +67,11 @@ public class BBQRecipeGen {
 
 		unlock(pvd, new CombineItemRecipeBuilder(BBQDItems.KEBAB_SANDWICH.get(), 1)::unlockedBy, Items.BREAD)
 				.requires(Tags.Items.FOODS_BREAD).requires(BBQTagGen.GRILLED_SKEWERS).requires(BBQTagGen.GRILLED_SKEWERS)
-				.requires(CommonTags.FOODS_CABBAGE).requires(CommonTags.FOODS_ONION)
+				.requires(CommonTags.Items.FOODS_CABBAGE).requires(CommonTags.Items.FOODS_ONION)
 				.save(pvd);
 
 		unlock(pvd, new CombineItemRecipeBuilder(BBQDItems.KEBAB_WRAP.get(), 1)::unlockedBy, Items.BREAD)
-				.requires(Tags.Items.FOODS_BREAD).requires(BBQTagGen.GRILLED_SKEWERS).requires(CommonTags.FOODS_CABBAGE)
+				.requires(Tags.Items.FOODS_BREAD).requires(BBQTagGen.GRILLED_SKEWERS).requires(CommonTags.Items.FOODS_CABBAGE)
 				.save(pvd);
 
 	}

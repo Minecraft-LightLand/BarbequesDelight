@@ -1,3 +1,9 @@
+1.3.0
+- Compatible with Farmer's Delight 1.3
+
+1.2.2
+- Fix saturation bug
+
 1.2.1
 - Allow having something in offhand while doing 1-ingredient skewering
 

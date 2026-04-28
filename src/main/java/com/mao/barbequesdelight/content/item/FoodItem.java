@@ -1,6 +1,7 @@
 package com.mao.barbequesdelight.content.item;
 
 import com.mao.barbequesdelight.init.data.BBQLangData;
+import com.mao.barbequesdelight.util.FDConfig;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffect;
@@ -10,12 +11,11 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import vectorwing.farmersdelight.common.Configuration;
 
 import java.util.List;
 
 public class FoodItem extends Item {
-	
+
 	private static Component getTooltip(MobEffectInstance eff) {
 		MutableComponent ans = Component.translatable(eff.getDescriptionId());
 		MobEffect mobeffect = eff.getEffect().value();
@@ -57,7 +57,7 @@ public class FoodItem extends Item {
 
 	@Override
 	public void appendHoverText(ItemStack stack, TooltipContext level, List<Component> list, TooltipFlag flag) {
-		if (Configuration.FOOD_EFFECT_TOOLTIP.get())
+		if (FDConfig.addTooltip())
 			getFoodEffects(stack, list);
 	}
 
