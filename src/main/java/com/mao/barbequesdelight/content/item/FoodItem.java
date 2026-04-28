@@ -2,6 +2,7 @@ package com.mao.barbequesdelight.content.item;
 
 import com.mao.barbequesdelight.init.data.BBQLangData;
 import com.mao.barbequesdelight.init.food.BBQSeasoning;
+import com.mao.barbequesdelight.util.FDConfig;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffect;
@@ -61,7 +62,7 @@ public class FoodItem extends Item {
 
 	@Override
 	public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> list, TooltipFlag flag) {
-		if (Configuration.FOOD_EFFECT_TOOLTIP.get())
+		if (FDConfig.addTooltip())
 			getFoodEffects(stack, list);
 	}
 

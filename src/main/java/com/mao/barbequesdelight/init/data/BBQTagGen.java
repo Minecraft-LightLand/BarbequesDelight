@@ -12,7 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
+import vectorwing.farmersdelight.common.tag.CommonTags;
 
 public class BBQTagGen {
 
@@ -28,23 +28,23 @@ public class BBQTagGen {
 	}
 
 	public static void onItemTagGen(RegistrateItemTagsProvider pvd) {
-		pvd.addTag(ForgeTags.VEGETABLES_POTATO);
-		pvd.addTag(ForgeTags.VEGETABLES_TOMATO);
-		pvd.addTag(ForgeTags.VEGETABLES_CARROT);
-		pvd.addTag(ForgeTags.VEGETABLES_ONION);
+		pvd.addTag(CommonTags.Items.VEGETABLES_POTATO);
+		pvd.addTag(CommonTags.Items.VEGETABLES_TOMATO);
+		pvd.addTag(CommonTags.Items.VEGETABLES_CARROT);
+		pvd.addTag(CommonTags.Items.VEGETABLES_ONION);
 		pvd.addTag(VEGETABLE).addTags(
-				ForgeTags.VEGETABLES_POTATO,
-				ForgeTags.VEGETABLES_TOMATO,
-				ForgeTags.VEGETABLES_CARROT,
-				ForgeTags.VEGETABLES_ONION,
+				CommonTags.Items.VEGETABLES_POTATO,
+				CommonTags.Items.VEGETABLES_TOMATO,
+				CommonTags.Items.VEGETABLES_CARROT,
+				CommonTags.Items.VEGETABLES_ONION,
 				Tags.Items.MUSHROOMS
 		);
 		var fruits = ItemTags.create(new ResourceLocation("forge", "fruits"));
 		pvd.addTag(fruits);
-		pvd.addTag(ForgeTags.BERRIES);
+		pvd.addTag(CommonTags.Items.BERRIES);
 		pvd.addTag(FRUITS).addTags(
 				fruits,
-				ForgeTags.BERRIES
+				CommonTags.Items.BERRIES
 		).add(Items.APPLE, Items.MELON_SLICE);
 	}
 
